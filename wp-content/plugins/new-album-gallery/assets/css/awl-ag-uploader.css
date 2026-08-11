@@ -1,0 +1,45 @@
+/* Add New Image Slide CSS Admin */
+/* NOTE: Legacy float/width styles removed. Modern layout is handled by admin-modern.css */
+
+.new-image-slide .dashicons {
+	color : #fff;	
+	width: 100px;
+	height: 100px;
+	margin-top: 22px;
+	text-align: center;
+	border-radius : 15px;	
+	cursor: pointer !important;
+}
+
+.add-text {
+	color: #fff;
+	cursor: pointer;
+	font-family: Georgia,serif;
+	font-size: 30px;
+	height: 40px;
+	margin-bottom: 4%;
+	margin-left: 10px;
+	margin-top: 10%;
+	overflow: hidden;
+	padding-top: 4px;
+	width: 200px;
+}
+
+/* Settings CSS */
+.input-text-wrap {
+	margin-top: 30px;
+	margin-left: 15px;
+}
+.input-text-wrap input[type=text] {
+	width: 50%;
+	border: 1px solid #3366FF;
+	border-left: 6px solid #3366FF;
+}
+.input-text-wrap input[type=radio] {
+	border: 1px solid #3366FF;
+	margin-bottom: 6px;
+}
+.input-text-wrap label {
+	font-size: 14px;
+	font-weight: bolder;
+}

@@ -1,0 +1,61 @@
+/**
+ * Album Gallery Premium - Frontend Modern Styles
+ * Part of Phase 1: Skeleton Loading
+ */
+
+/* Skeleton Container */
+.nag-skeleton {
+    position: relative;
+    overflow: hidden;
+    background-color: #f3f4f6; /* light grey base */
+    border-radius: 8px; /* matches premium UI */
+    width: 100%;
+}
+
+/* Shimmer Overlay */
+.nag-skeleton.nag-loading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0,
+        rgba(255, 255, 255, 0.2) 20%,
+        rgba(255, 255, 255, 0.5) 60%,
+        rgba(255, 255, 255, 0)
+    );
+    animation: nag-shimmer 2s infinite;
+}
+
+@keyframes nag-shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Image behavior inside skeleton */
+.nag-skeleton img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Loaded State */
+.nag-skeleton.nag-loaded img {
+    opacity: 1;
+}
+
+.nag-skeleton.nag-loaded::after {
+    display: none;
+}
+
+/* Support for different hover types */
+
+

@@ -1,0 +1,349 @@
+.nag-albums-grid {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    clear: both;
+    padding: 20px 0;
+}
+
+.nag-albums-grid::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.awl-ag-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.awl-ag-col {
+    position: relative;
+    padding: 35px;
+    box-sizing: border-box;
+    float: left;
+}
+
+/* Responsive Breakpoints */
+.col-xs-12 {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.col-xs-6 {
+    flex: 0 0 50%;
+    width: 50%;
+    max-width: 50%;
+}
+
+.col-xs-4 {
+    flex: 0 0 33.333%;
+    width: 33.333%;
+    max-width: 33.333%;
+}
+
+@media (min-width: 576px) {
+    .col-sm-12 {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .col-sm-6 {
+        flex: 0 0 50%;
+        width: 50%;
+        max-width: 50%;
+    }
+
+    .col-sm-4 {
+        flex: 0 0 33.333%;
+        width: 33.333%;
+        max-width: 33.333%;
+    }
+
+    .col-sm-3 {
+        flex: 0 0 25%;
+        width: 25%;
+        max-width: 25%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-12 {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .col-md-6 {
+        flex: 0 0 50%;
+        width: 50%;
+        max-width: 50%;
+    }
+
+    .col-md-4 {
+        flex: 0 0 33.333%;
+        width: 33.333%;
+        max-width: 33.333%;
+    }
+
+    .col-md-3 {
+        flex: 0 0 25%;
+        width: 25%;
+        max-width: 25%;
+    }
+
+    .col-md-2 {
+        flex: 0 0 16.666%;
+        width: 16.666%;
+        max-width: 16.666%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-12 {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .col-lg-6 {
+        flex: 0 0 50%;
+        width: 50%;
+        max-width: 50%;
+    }
+
+    .col-lg-4 {
+        flex: 0 0 33.333%;
+        width: 33.333%;
+        max-width: 33.333%;
+    }
+
+    .col-lg-3 {
+        flex: 0 0 25%;
+        width: 25%;
+        max-width: 25%;
+    }
+
+    .col-lg-2 {
+        flex: 0 0 16.666%;
+        width: 16.666%;
+        max-width: 16.666%;
+    }
+}
+
+.nag-album-cover {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.nag-trigger {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.stack {
+    margin: 0 auto !important;
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+.view {
+    margin: 0 auto !important;
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+.view img {
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.group {
+    margin: 0 auto 30px auto !important;
+    height: 280px;
+}
+
+.nag-gallery-container {
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.mask {
+    cursor: pointer;
+}
+
+/* Dynamic Variable-based Styling */
+.album-gallery img {
+    object-fit: cover !important;
+    height: 230px !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+/* Custom Thumbnail Aspect Ratios & Shapes */
+.album-gallery.ag-aspect-square img {
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+}
+
+.album-gallery.ag-aspect-portrait img {
+    height: auto !important;
+    aspect-ratio: var(--ag-thumb-aspect, 3 / 4) !important;
+}
+
+.album-gallery.ag-aspect-landscape img {
+    height: auto !important;
+    aspect-ratio: var(--ag-thumb-aspect, 4 / 3) !important;
+}
+
+.album-gallery.ag-aspect-original img {
+    height: auto !important;
+    aspect-ratio: auto !important;
+}
+
+/* Responsive group container height for custom aspect-ratio hover stack effects */
+.album-gallery.ag-aspect-square .group,
+.album-gallery.ag-aspect-portrait .group,
+.album-gallery.ag-aspect-landscape .group {
+    height: auto !important;
+}
+
+.album-gallery .album_title-dynamic {
+    color: var(--ag-title-color, #000) !important;
+    font-size: var(--ag-title-size, 20px) !important;
+    font-weight: 700 !important;
+}
+
+/* LightGallery v2 dynamic styling */
+.lg-sub-html,
+.lg-sub-html h4 {
+    color: var(--ag-lb-title-color, #fff) !important;
+    font-size: var(--ag-lb-title-size, 16px) !important;
+}
+
+.ag-lg-link-container {
+    margin-top: 15px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.ag-lg-visit-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: var(--ag-btn-py, 10px) var(--ag-btn-px, 22px) !important;
+    border-radius: var(--ag-btn-radius, 50px) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    line-height: 1 !important;
+    background: var(--ag-btn-bg, #6366f1) !important;
+    color: var(--ag-btn-text, #fff) !important;
+    box-shadow: var(--ag-btn-shadow, none) !important;
+    backdrop-filter: var(--ag-btn-filter, none);
+    -webkit-backdrop-filter: var(--ag-btn-filter, none);
+    border: var(--ag-btn-border, none) !important;
+}
+
+.ag-lg-visit-link:hover {
+    background: var(--ag-btn-hover-bg, #a855f7) !important;
+    color: var(--ag-btn-hover-text, #fff) !important;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--ag-btn-hover-shadow, none) !important;
+}
+
+.ag-lg-visit-link .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lg-toolbar .lg-icon,
+.lg-actions .lg-next,
+.lg-actions .lg-prev,
+.lg-toolbar .lg-icon:after,
+.lg-actions .lg-next:after,
+.lg-actions .lg-prev:after {
+    color: var(--ag-lb-icon-color, #fff) !important;
+}
+
+.lg-toolbar .lg-icon:hover,
+.lg-actions .lg-next:hover,
+.lg-actions .lg-prev:hover,
+.lg-toolbar .lg-icon:hover:after,
+.lg-actions .lg-next:hover:after,
+.lg-actions .lg-prev:hover:after {
+    color: var(--ag-lb-icon-color, #fff) !important;
+    opacity: 0.8;
+}
+
+/* Fix for v1.10.0 download icon visibility */
+#lg-download.lg-icon {
+    display: inline-block !important;
+}
+
+/* Fix for blurry YouTube/Vimeo videos in v1.10.0 */
+.lg-video-cont {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.lg-video-cont iframe {
+    background-color: #000;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.6);
+    border: none !important;
+}
+
+/* Ensure the iframe container maintains sharp aspect ratio */
+.lg-video-cont .lg-video {
+    padding-bottom: 56.25% !important;
+    /* 16:9 Aspect Ratio */
+}
+
+/* Album Title Alignment Styles */
+.nag-title-align_height {
+    min-height: 52px;
+    height: 100px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    /*display: flex !important;*/
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+}
+
+.nag-title-single_line .album_title-dynamic {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
+    width: 100%;
+    text-align: center;
+}
+
+.nag-title-below_image {
+    text-align: center;
+    min-height: 52px;
+    height: 100px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    /*display: flex !important;*/
+    align-items: center !important;
+    justify-content: center !important;
+}
